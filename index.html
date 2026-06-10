@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="pokedex-container">
+
+        <!-- TOPO -->
+        <div class="pokedex-top">
+
+            <div class="big-light"></div>
+
+            <div class="small-lights">
+
+                <div class="small-light red"></div>
+
+                <div class="small-light yellow"></div>
+
+                <div class="small-light green"></div>
+
+            </div>
+
+        </div>
+
+        <!-- TELA -->
+        <div id="pokemonScreen" class="pokemon-screen">
+
+            <img id="pokemonImage" src="" alt="Pokemon">
+
+        </div>
+
+        <!-- PESQUISA -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="pokemonInput"
+                placeholder="Nome ou número do Pokémon"
+            >
+
+            <button onclick="buscarPokemon()">
+                Buscar
+            </button>
+
+        </div>
+
+        <!-- INFORMAÇÕES -->
+        <div class="pokemon-info">
+
+            <div class="title-row">
+
+                <h2 id="pokemonName">
+                    Selecione um Pokémon
+                </h2>
+
+                <button id="favoriteBtn">
+                    ⭐
+                </button>
+
+            </div>
+
+            <p id="pokemonId"></p>
+            <p id="pokemonType"></p>
+            <p id="pokemonHeight"></p>
+            <p id="pokemonWeight"></p>
+            <p id="pokemonAbilities"></p>
+
+        </div>
+
+        <!-- STATUS -->
+        <div class="stats-container">
+
+            <h3>Status</h3>
+
+            <div id="stats"></div>
+
+        </div>
+
+    </div>
+
+    <!-- FAVORITOS -->
+    <div class="favorites-container">
+
+        <h2>⭐ Favoritos</h2>
+
+        <div id="favoritesList"></div>
+
+    </div>
+
+    <!-- CATÁLOGO -->
+    <div class="catalog-container">
+
+        <h2>🎯 Filtrar Pokémon</h2>
+
+        <div class="filters">
+
+            <button onclick="filtrarTipo('all')">Todos</button>
+
+            <button onclick="filtrarTipo('fire')">🔥 Fogo</button>
+
+            <button onclick="filtrarTipo('water')">💧 Água</button>
+
+            <button onclick="filtrarTipo('grass')">🌿 Planta</button>
+
+            <button onclick="filtrarTipo('electric')">⚡ Elétrico</button>
+
+            <button onclick="filtrarTipo('ground')">🟫 Terra</button>
+
+            <button onclick="filtrarTipo('rock')">🪨 Pedra</button>
+
+            <button onclick="filtrarTipo('psychic')">🔮 Psíquico</button>
+
+            <button onclick="filtrarTipo('ice')">❄️ Gelo</button>
+
+            <button onclick="filtrarTipo('dragon')">🐉 Dragão</button>
+
+            <button onclick="filtrarTipo('ghost')">👻 Fantasma</button>
+
+            <button onclick="filtrarTipo('dark')">🌙 Sombrio</button>
+
+            <button onclick="filtrarTipo('fairy')">🧚 Fada</button>
+
+        </div>
+
+        <h2>📚 Catálogo Pokémon</h2>
+
+        <div id="pokemonCatalog" class="catalog-grid"></div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
